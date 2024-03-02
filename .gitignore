@@ -1,0 +1,6 @@
+/vendor
+/ssh_servers.json
+/.idea
+/.vscode
+/.vagrant
+.phpunit.result.cache
