@@ -1,5 +1,5 @@
 {
-    "name": "dansysanalyst/ssh_cli",
+    "name": "dansysanalyst/ssh_connector",
     "description": "SSH Connector provides a convenient way to connect to your favorite SSH servers listed in a JSON file.",
     "keywords": ["cli", "ssh", "php", "laravel-zero", "laravel"],
     "type": "project",

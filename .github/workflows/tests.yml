@@ -1,6 +1,14 @@
 name: Tests
 
-on: ['push', 'pull_request']
+on:
+  push:
+    branches:
+      - "**"
+    paths-ignore: ["**/**.md", "**/**.MD", "art/**", "**/**.txt", "/.github/ISSUE_TEMPLATE/**", ".gitkeep", ".gitignore", ".gitattributes"]
+
+  pull_request:
+    types: [ready_for_review, synchronize, opened]
+    paths-ignore: ["**/**.md", "**/**.MD", "art/**", "**/**.txt", "/.github/ISSUE_TEMPLATE/**", ".gitkeep", ".gitignore", ".gitattributes"]
 
 jobs:
   ci:

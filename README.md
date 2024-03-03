@@ -6,11 +6,11 @@ SSH Connector provides a convenient way to connect to your favorite SSH servers 
 
 ## Usage
 
-Download the binary [here](https://github.com/dansysanalyst/ssh_connector/raw/main/builds/sshconnector) and copy it to your preferred folder (e,g: `~./config/bin/`).
+Download the binary [here](https://github.com/dansysanalyst/ssh_connector/raw/main/builds/sshconnector) and copy it to your preferred folder (e,g: `~/.config/bin/`).
 
 Run `./sshconnector` to access the SSH servers menu.
 
-For your convenience, you can create an alias in your shell configuration. For example, `alias sshs="~./config/bin/sshconnector"`.
+For your convenience, you can create an alias in your shell configuration. For example, `alias sshs="~/.config/bin/sshconnector"`.
 
 ### Config Files
 
