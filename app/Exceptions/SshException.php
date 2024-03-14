@@ -17,4 +17,14 @@ final class SshException extends \Exception
 
         throw new self("ERROR: Invalid SSH Server Config{$message}.");
     }
+
+    /**
+     * @phpstan-return never
+     *
+     * @throws \Exception
+     */
+    public static function InvalidServerSelected(): never
+    {
+        throw new self('ERROR: Please select a valid server.');
+    }
 }

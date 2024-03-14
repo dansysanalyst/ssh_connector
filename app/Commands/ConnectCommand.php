@@ -5,7 +5,7 @@ declare(strict_types = 1);
 namespace App\Commands;
 
 use App\Actions\{ConnectToServer, ListConfigFiles, ParseConfigFile};
-
+use App\Exceptions\SshException;
 use App\Support\Server;
 
 use function Laravel\Prompts\{error, select};
@@ -54,9 +54,13 @@ final class ConnectCommand extends Command
         $selectedServer = select(
             label: 'Select a server',
             hint: "Loaded from: {$this->sshConfigFile}",
-            options: $servers->mapwithKeys(fn (Server $server) => $server->asMenuOption())->toArray(),
+            options: collect(['-' => str_repeat('*', 30)])->merge($servers->mapwithKeys(fn (Server $server) => $server->asMenuOption()))->toArray(),
             scroll: 30
         );
+
+        if ($selectedServer == '-') {
+            SshException::InvalidServerSelected();
+        }
 
         return $servers->first(function (Server $server) use ($selectedServer): bool {
             /* @phpstan-ignore-next-line */
