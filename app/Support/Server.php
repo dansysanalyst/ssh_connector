@@ -63,6 +63,14 @@ final class Server
         return get_object_vars($this);
     }
 
+    public function toPairedString(): string
+    {
+        return collect(get_object_vars($this))
+            ->filter()
+            ->map(fn ($value, $key) => strtoupper($key) . "={$value}")
+            ->implode(',');
+    }
+
     private function validate(): void
     {
         $server = $this->toArray();
