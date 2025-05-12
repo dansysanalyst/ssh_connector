@@ -7,7 +7,7 @@ namespace App\Commands;
 use App\Actions\{ListConfigFiles, ParseConfigFile};
 use App\Support\Server;
 
-use function Laravel\Prompts\{error, select};
+use function Laravel\Prompts\{error};
 
 use LaravelZero\Framework\Commands\Command;
 

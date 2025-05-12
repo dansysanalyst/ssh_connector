@@ -24,17 +24,17 @@
         "cp": "cp ./builds/sshconnector ~/.config/bin"
     },    
     "require": {
-        "php": "^8.1",
-        "illuminate/validation": "^10.46",
-        "laravel-zero/framework": "^10.2",
-        "laravel/prompts": "^0.1.16",
-        "nunomaduro/termwind": "^1.15.1"
+        "php": "^8.2.0",
+        "illuminate/validation": "^11.44",
+        "laravel-zero/framework": "^11.36.1",
+        "laravel/prompts": "^0.3.5",
+        "nunomaduro/termwind": "^2.3"
     },
     "require-dev": {
         "larastan/larastan": "^2.0",
-        "laravel/pint": "^1.13",
-        "mockery/mockery": "^1.6",
-        "pestphp/pest": "^2.22"
+        "laravel/pint": "^1.18.3",
+        "mockery/mockery": "^1.6.12",
+        "pestphp/pest": "^3.7.1"
     },
     "autoload": {
         "psr-4": {

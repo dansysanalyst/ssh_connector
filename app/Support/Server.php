@@ -79,11 +79,11 @@ final class Server
             'id'          => ['required', 'uuid'],
             'title'       => ['required', 'string', 'max:255'],
             'group'       => ['string', 'max:255'],
-            'hostname'    => ['required', new ValidHostRule()],
+            'hostname'    => ['required', new ValidHostRule],
             'user'        => ['required', 'string', 'max:255'],
             'port'        => ['required', 'numeric'],
             'tunnelPort'  => ['nullable', 'numeric', 'gt:0'],
-            'keyfilePath' => ['nullable', 'string', new FileExistsRule()],
+            'keyfilePath' => ['nullable', 'string', new FileExistsRule],
         ]);
 
         if ($validator->fails()) {
