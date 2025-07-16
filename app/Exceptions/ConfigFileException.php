@@ -17,9 +17,9 @@ final class ConfigFileException extends \Exception
     }
 
     /**
-     * @phpstan-return never
-     *
      * @param  array<int, string>  $configFiles
+     *
+     * @phpstan-return never
      *
      * @throws \Exception
      */

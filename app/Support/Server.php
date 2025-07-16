@@ -7,7 +7,6 @@ namespace App\Support;
 use App\Exceptions\SshException;
 use App\Rules\{FileExistsRule, ValidHostRule};
 use Illuminate\Support\Facades\Validator;
-
 use Illuminate\Support\Stringable;
 
 /**
@@ -56,7 +55,7 @@ final class Server
     }
 
     /**
-     * @return array<string, mixed>.
+     * @return array<string, mixed>
      */
     public function toArray(): array
     {
